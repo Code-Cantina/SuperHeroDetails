@@ -9,7 +9,7 @@ import UIKit
 
 class PowerStatsView: UIView {
     
-    private var heroData: HeroData?
+    private var heroData: HeroData? //this will be passed in with init
     
     required init(hero: HeroData?) {
         self.heroData = hero
@@ -23,8 +23,12 @@ class PowerStatsView: UIView {
         self.updateHeroUIDetails()
     }
    
-    // header
-    private let statHeader = HeroBodyLabel(textAlignment: .center)
+    //MARK: - UI Properties
+    private let statHeader: HeroTitleLabel = {
+        let lbl = HeroTitleLabel(textAlignment: .left, fontSize: 16)
+        lbl.text = "Power Stats:"
+        return lbl
+    }()
     
     private let powerStatsValuesStack: UIStackView = {
         let stack = UIStackView()
@@ -35,16 +39,51 @@ class PowerStatsView: UIView {
         stack.translatesAutoresizingMaskIntoConstraints = false
         return stack
     }()
-    private let intelligence = HeroBodyLabel(textAlignment: .center)
-    private let strength = HeroBodyLabel(textAlignment: .center)
-    private let speed = HeroBodyLabel(textAlignment: .center)
-    private let durability = HeroBodyLabel(textAlignment: .center)
-    private let power = HeroBodyLabel(textAlignment: .center)
-    private let combat = HeroBodyLabel(textAlignment: .center)
+    private let intelligence = HeroBodyLabel(textAlignment: .left)
+    private let strength = HeroBodyLabel(textAlignment: .left)
+    private let speed = HeroBodyLabel(textAlignment: .left)
+    private let durability = HeroBodyLabel(textAlignment: .left)
+    private let power = HeroBodyLabel(textAlignment: .left)
+    private let combat = HeroBodyLabel(textAlignment: .left)
     
+    //appearance header
+    private let appearanceHeader: HeroTitleLabel = {
+        let lbl = HeroTitleLabel(textAlignment: .left, fontSize: 16)
+        lbl.text = "Appearance:"
+        return lbl
+    }()
+    
+    private let appearanceStatsValuesStack: UIStackView = {
+        let stack = UIStackView()
+        stack.alignment = .leading
+        stack.axis = .vertical
+        stack.spacing = 5
+        stack.distribution = .fillProportionally
+        stack.translatesAutoresizingMaskIntoConstraints = false
+        return stack
+    }()
+    private let gender = HeroBodyLabel(textAlignment: .left)
+    private let race = HeroBodyLabel(textAlignment: .left)
+    private let heroHeight = HeroBodyLabel(textAlignment: .left)
+    private let heroWeight = HeroBodyLabel(textAlignment: .left)
+    private let eyeColor = HeroBodyLabel(textAlignment: .left)
+    private let hairColor = HeroBodyLabel(textAlignment: .left)
+    
+    private let stacksStack: UIStackView = {
+        let stack = UIStackView()
+        stack.alignment = .leading
+        stack.axis = .horizontal
+        stack.spacing = 5
+        stack.distribution = .fillEqually
+        stack.translatesAutoresizingMaskIntoConstraints = false
+        return stack
+    }()
+    
+    //MARK: - UI Setup
     private func setupView() {
         self.translatesAutoresizingMaskIntoConstraints = false
-        statHeader.text = "Power Stats:"
+        
+        powerStatsValuesStack.addArrangedSubview(statHeader)
         
         powerStatsValuesStack.addArrangedSubview(intelligence)
         powerStatsValuesStack.addArrangedSubview(strength)
@@ -53,18 +92,23 @@ class PowerStatsView: UIView {
         powerStatsValuesStack.addArrangedSubview(power)
         powerStatsValuesStack.addArrangedSubview(combat)
         
-        addSubview(statHeader)
-        addSubview(powerStatsValuesStack)
+        appearanceStatsValuesStack.addArrangedSubview(appearanceHeader)
+        appearanceStatsValuesStack.addArrangedSubview(gender)
+        appearanceStatsValuesStack.addArrangedSubview(race)
+        appearanceStatsValuesStack.addArrangedSubview(heroHeight)
+        appearanceStatsValuesStack.addArrangedSubview(heroWeight)
+        appearanceStatsValuesStack.addArrangedSubview(eyeColor)
+        appearanceStatsValuesStack.addArrangedSubview(hairColor)
+        
+        stacksStack.addArrangedSubview(powerStatsValuesStack)
+        stacksStack.addArrangedSubview(appearanceStatsValuesStack)
+        addSubview(stacksStack)
         
         NSLayoutConstraint.activate([
-            statHeader.topAnchor.constraint(equalTo: self.topAnchor, constant: Layout.standardViewPadding),
-            statHeader.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: Layout.standardViewPadding),
-            statHeader.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -Layout.standardViewPadding),
-            
-            powerStatsValuesStack.topAnchor.constraint(equalTo: statHeader.bottomAnchor, constant: Layout.standardViewPadding),
-            powerStatsValuesStack.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 0),
-            powerStatsValuesStack.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: 0),
-            powerStatsValuesStack.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -Layout.standardViewPadding)
+            stacksStack.topAnchor.constraint(equalTo: self.topAnchor, constant: Layout.standardViewPadding),
+            stacksStack.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            stacksStack.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            stacksStack.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -Layout.standardViewPadding)
             
         ])
         self.updateHeroUIDetails()
@@ -79,16 +123,14 @@ class PowerStatsView: UIView {
             self.durability.text = "Durability: \(hero.powerstats.durability)"
             self.power.text = "Power: \(hero.powerstats.power)"
             self.combat.text = "Combat: \(hero.powerstats.combat)"
+            
+            self.gender.text = "Gender: \(hero.appearance.gender)"
+            self.race.text = "Race: \(hero.appearance.race)"
+            self.heroHeight.text = "Height: \(hero.appearance.height[0])"
+            self.heroWeight.text = "Weight: \(hero.appearance.weight[0])"
+            self.eyeColor.text = "Eye Color: \(hero.appearance.eyeColor)"
+            self.hairColor.text = "Hair Color: \(hero.appearance.hairColor)"
         }
-//        else {
-//            self.intelligence.text = ""
-//            self.strength.text = ""
-//            self.speed.text = ""
-//            self.durability.text = ""
-//            self.power.text = ""
-//            self.combat.text = ""
-//        }
-        
     }
     
     required init?(coder: NSCoder) {

@@ -41,13 +41,6 @@ class HeroHomeVC: HeroMainBackVC {
     
     private var detailsArea: HeroDetailsView!
     
-    
-    //bio
-    // full name, alter ego, aliases, birth, first appear, publisher, alignment
-    // work
-    // connections
-    
-    
     //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -96,7 +89,7 @@ class HeroHomeVC: HeroMainBackVC {
             featuredCollectionView.topAnchor.constraint(equalTo: featuredContainerView.topAnchor),
             featuredCollectionView.leadingAnchor.constraint(equalTo: featuredContainerView.leadingAnchor, constant: 2),
             featuredCollectionView.trailingAnchor.constraint(equalTo: featuredContainerView.trailingAnchor), //not adding padding here to give illusion
-            featuredCollectionView.heightAnchor.constraint(equalToConstant: 267),
+            featuredCollectionView.heightAnchor.constraint(equalToConstant: 267), //found this number playing around trial and error
 
         ])
         
@@ -108,15 +101,14 @@ class HeroHomeVC: HeroMainBackVC {
         
         NSLayoutConstraint.activate([
             detailsArea.topAnchor.constraint(equalTo: featuredCollectionView.bottomAnchor, constant: Layout.standardViewPadding),
-            detailsArea.leadingAnchor.constraint(equalTo: featuredContainerView.leadingAnchor, constant: Layout.standardViewPadding),
-            detailsArea.trailingAnchor.constraint(equalTo: featuredContainerView.trailingAnchor, constant: -Layout.standardViewPadding),
+            detailsArea.leadingAnchor.constraint(equalTo: featuredContainerView.leadingAnchor),
+            detailsArea.trailingAnchor.constraint(equalTo: featuredContainerView.trailingAnchor),
             detailsArea.bottomAnchor.constraint(equalTo: featuredContainerView.bottomAnchor, constant: -Layout.standardViewPadding)
         ])
         
     }
     
     //MARK: - Data
-    
     
     /// fetch the featured heros data from the server. This is a json file currently.
     private func fetchFeaturedHeros() {
@@ -212,7 +204,6 @@ extension HeroHomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICo
         //update the featured hero information to the active hero in view
         let hero = featuredHeros[index.row]
         self.updateFeaturedHeroInfo(hero: hero)
-
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -237,7 +228,7 @@ extension HeroHomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICo
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 300, height: 250)
+        return CGSize(width: 300, height: 250) //these values seem good for the images provided
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {

@@ -10,6 +10,7 @@
 		421029DE26D489F000E925BD /* HeroHeaderLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421029DD26D489F000E925BD /* HeroHeaderLabel.swift */; };
 		421029E126D4969A00E925BD /* HeroDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421029E026D4969A00E925BD /* HeroDetailsView.swift */; };
 		421029E326D4999600E925BD /* PowerStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421029E226D4999600E925BD /* PowerStatsView.swift */; };
+		42523C7526D73C0D00270E53 /* BiographyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42523C7426D73C0D00270E53 /* BiographyView.swift */; };
 		42CD160926D0855400641646 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CD160826D0855400641646 /* AppDelegate.swift */; };
 		42CD160B26D0855400641646 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CD160A26D0855400641646 /* SceneDelegate.swift */; };
 		42CD161226D0855500641646 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42CD161126D0855500641646 /* Assets.xcassets */; };
@@ -40,6 +41,7 @@
 		421029DD26D489F000E925BD /* HeroHeaderLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroHeaderLabel.swift; sourceTree = "<group>"; };
 		421029E026D4969A00E925BD /* HeroDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroDetailsView.swift; sourceTree = "<group>"; };
 		421029E226D4999600E925BD /* PowerStatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerStatsView.swift; sourceTree = "<group>"; };
+		42523C7426D73C0D00270E53 /* BiographyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiographyView.swift; sourceTree = "<group>"; };
 		42CD160526D0855400641646 /* CantinaHero.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CantinaHero.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42CD160826D0855400641646 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		42CD160A26D0855400641646 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 			children = (
 				421029E026D4969A00E925BD /* HeroDetailsView.swift */,
 				421029E226D4999600E925BD /* PowerStatsView.swift */,
+				42523C7426D73C0D00270E53 /* BiographyView.swift */,
 			);
 			path = ScreenComponents;
 			sourceTree = "<group>";
@@ -327,6 +330,7 @@
 				42CD162926D087DB00641646 /* HeroSearchVC.swift in Sources */,
 				42CEB04126D1F649007D7E96 /* HeroSearchBar.swift in Sources */,
 				421029E326D4999600E925BD /* PowerStatsView.swift in Sources */,
+				42523C7526D73C0D00270E53 /* BiographyView.swift in Sources */,
 				42CEB05A26D23D79007D7E96 /* UIColor+Ext.swift in Sources */,
 				42CD161F26D0858C00641646 /* SuperheroDataObjects.swift in Sources */,
 				42CEB04F26D21F0D007D7E96 /* PersistanceManager.swift in Sources */,

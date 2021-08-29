@@ -5,6 +5,7 @@
 * Simple app to display hero details from a public API located at https://superheroapi.com/index.html 
 * Was re creating a hoizontal image scroller that adjusts content size as it scrolls, updates data for active cell
 * Search capabilities
+* Used native network calls instead of implementing AlamoFire like I normally would for funzzies.
 * 100% programmatic UI
 
 ## Screen Shots
@@ -15,9 +16,7 @@
 
 
 ## Lessons Learned
-* In App Purchases with Store Kit, the pains and the gains
-* Leaderboard integration with GameKit is pretty simple
-* Spend more time mocking/scoping instead of winging it 🙄
+* I did not use any  packages for networking like I normally would. While relativly simple to get going, in order to do proper error handling more code would be needed. I appriciate Alamofire more.
 
 ## How To Get
 * Clone/Fork

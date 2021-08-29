@@ -3,7 +3,7 @@
 
 ## Description
 * Simple app to display hero details from a public API located at https://superheroapi.com/index.html
-* Was re creating a horizontal image scroller that adjusts content size as it scrolls, updates data for active cell
+* Was re creating a horizontal image scroller that adjusts content size as it scrolls/pages, updates data for active cell
 * Search capabilities
 * Used native network calls instead of implementing AlamoFire like I normally would for funzies.
 * 100% programmatic UI
@@ -16,6 +16,7 @@
 
 
 ## Lessons Learned
+* For collection views, paging enabled only really works for full page width cells.
 * I did not use any  packages for networking like I normally would. While relatively simple to get going, in order to do proper error handling more code would be needed. I appreciate Alamofire more.
 
 

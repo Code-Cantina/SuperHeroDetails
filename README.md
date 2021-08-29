@@ -1,5 +1,5 @@
 # SuperHeroDetails
-
+*You will need to get your own API key, its free from https://superheroapi.com/index.html. I have no affilication with them.
 
 ## Description
 * Simple app to display hero details from a public API located at https://superheroapi.com/index.html 
@@ -26,6 +26,6 @@
 
 ## How To Get
 * Clone/Fork
-* Get you SuperHero API key from https://superheroapi.com/index.html
+* Get your SuperHero API key from https://superheroapi.com/index.html
 
 

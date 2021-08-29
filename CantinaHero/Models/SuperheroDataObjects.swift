@@ -19,7 +19,7 @@ struct SuperHero: Codable {
     }
 }
 
-// MARK: - Result
+// MARK: - HeroData
 struct HeroData: Codable {
     let id, name: String
     let powerstats: Powerstats
@@ -77,7 +77,6 @@ struct HeroImage: Codable {
 // MARK: - Powerstats
 struct Powerstats: Codable {
     let intelligence, strength, speed, durability, power, combat: String
-//    let power, combat: String
 }
 
 // MARK: - Work

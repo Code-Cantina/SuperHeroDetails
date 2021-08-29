@@ -12,18 +12,16 @@ class NetworkManager {
     private let baseUrl = "https://superheroapi.com/api/"
     let cache = NSCache<NSString, UIImage>()
     
-    private let heroApiToken = "" // GET Your Own Key from the baseURL site.
+    private let heroApiToken = "YOUR_KEY_HERE" // GET Your Own Key from https://superheroapi.com
     
     //https://superheroapi.com/api/access-token/search/name
     
     private init() {}
 
-    // method to get search results for a hero name
-    ///search/name
+    // method to get search results for provided string
     func fetchSearchResults(for heroName: String, completed: @escaping (Swift.Result<SuperHero, HeroDataError>) -> Void) {
         let endPoint = "/search/"
         let fullUrl = baseUrl + "\(heroApiToken)\(endPoint)\(heroName)"
-        print("url: \(fullUrl)")
         
         guard let url = URL(string: fullUrl) else {
             completed(.failure(.invalidHeroName))
@@ -63,8 +61,6 @@ class NetworkManager {
         task.resume() //start the network call
     }
     
-    // method to get hero details for a provided hero id
-    
     // method to fetch image
     func downloadImage(from urlString: String, completed: @escaping (UIImage?) -> Void) {
         
@@ -96,7 +92,6 @@ class NetworkManager {
         task.resume()
     }
 
-
 }
 
 
@@ -105,7 +100,4 @@ enum HeroDataError: String, Error {
     case unableToComplete = "Unable to completed request, check internet connection."
     case invalidResponse = "Invalid response from server."
     case invalidData = "The data received from server is invalid"
-    case unableToFavorite = "There was an error favoriting this hero. Please try again."
-    case alreadyInFavorites = "This hero is already in favorites"
-    
 }

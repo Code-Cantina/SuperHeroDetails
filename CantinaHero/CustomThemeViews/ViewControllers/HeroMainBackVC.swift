@@ -11,16 +11,14 @@ class HeroMainBackVC: UIViewController {
 
     var containerView: UIView!
     
-    func showLoadingView() {
+    func displayLoadingView() {
         containerView = UIView(frame: view.bounds)
-        view.addSubview(containerView)
-        
         containerView.backgroundColor = .systemBackground
         containerView.alpha = 0
         
-        UIView.animate(withDuration: 0.25) { self.containerView.alpha = 0.8 }
-        
         let activityIndicator = UIActivityIndicatorView(style: .large)
+        view.addSubview(containerView)
+        UIView.animate(withDuration: 0.25) { self.containerView.alpha = 0.8 }
         containerView.addSubview(activityIndicator)
         
         activityIndicator.translatesAutoresizingMaskIntoConstraints = false
@@ -30,7 +28,6 @@ class HeroMainBackVC: UIViewController {
         ])
         
         activityIndicator.startAnimating()
-        
     }
     
     func dismissLoadingView() {
@@ -38,12 +35,6 @@ class HeroMainBackVC: UIViewController {
             self.containerView.removeFromSuperview()
             self.containerView = nil
         }
-    }
-    
-    func showEmptyStateView(with message: String, in view: UIView) {
-//        let emptyStateView = GFEmptyStateView(message: message)
-//        emptyStateView.frame = view.bounds
-//        view.addSubview(emptyStateView)
     }
 
 }

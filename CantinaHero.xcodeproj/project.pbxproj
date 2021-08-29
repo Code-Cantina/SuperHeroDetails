@@ -11,6 +11,9 @@
 		421029E126D4969A00E925BD /* HeroDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421029E026D4969A00E925BD /* HeroDetailsView.swift */; };
 		421029E326D4999600E925BD /* PowerStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421029E226D4999600E925BD /* PowerStatsView.swift */; };
 		42523C7526D73C0D00270E53 /* BiographyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42523C7426D73C0D00270E53 /* BiographyView.swift */; };
+		42B078F526DB4089000491EF /* UICollectionViewCell+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B078F426DB4089000491EF /* UICollectionViewCell+Ext.swift */; };
+		42B078F726DB4174000491EF /* FeaturedHeroCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B078F626DB4174000491EF /* FeaturedHeroCell.swift */; };
+		42B078F926DB5752000491EF /* SearchedHeroCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B078F826DB5752000491EF /* SearchedHeroCell.swift */; };
 		42CD160926D0855400641646 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CD160826D0855400641646 /* AppDelegate.swift */; };
 		42CD160B26D0855400641646 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CD160A26D0855400641646 /* SceneDelegate.swift */; };
 		42CD161226D0855500641646 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42CD161126D0855500641646 /* Assets.xcassets */; };
@@ -19,21 +22,14 @@
 		42CD162326D086A000641646 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CD162226D086A000641646 /* NetworkManager.swift */; };
 		42CD162626D0878D00641646 /* CantinaHeroTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CD162526D0878D00641646 /* CantinaHeroTabBarController.swift */; };
 		42CD162926D087DB00641646 /* HeroSearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CD162826D087DB00641646 /* HeroSearchVC.swift */; };
-		42CD162B26D0881D00641646 /* HeroFavoritesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CD162A26D0881D00641646 /* HeroFavoritesVC.swift */; };
 		42CD162F26D08AAD00641646 /* SingleHeroProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CD162E26D08AAD00641646 /* SingleHeroProfileVC.swift */; };
 		42CD163126D08C6C00641646 /* HeroHomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CD163026D08C6C00641646 /* HeroHomeVC.swift */; };
 		42CD163726D0994D00641646 /* HeroMainBackVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CD163626D0994D00641646 /* HeroMainBackVC.swift */; };
-		42CD163926D0A2DF00641646 /* SearchResultsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CD163826D0A2DF00641646 /* SearchResultsVC.swift */; };
 		42CEB04126D1F649007D7E96 /* HeroSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CEB04026D1F649007D7E96 /* HeroSearchBar.swift */; };
 		42CEB04326D1F7D6007D7E96 /* LayoutConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CEB04226D1F7D6007D7E96 /* LayoutConstants.swift */; };
 		42CEB04526D1F981007D7E96 /* HeroTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CEB04426D1F981007D7E96 /* HeroTitleLabel.swift */; };
 		42CEB04726D1FCD4007D7E96 /* HeroBodyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CEB04626D1FCD4007D7E96 /* HeroBodyLabel.swift */; };
-		42CEB04926D1FFB7007D7E96 /* CommonName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CEB04826D1FFB7007D7E96 /* CommonName.swift */; };
-		42CEB04B26D2169C007D7E96 /* WebLinks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CEB04A26D2169C007D7E96 /* WebLinks.swift */; };
 		42CEB04D26D21E41007D7E96 /* AppImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CEB04C26D21E41007D7E96 /* AppImages.swift */; };
-		42CEB04F26D21F0D007D7E96 /* PersistanceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CEB04E26D21F0D007D7E96 /* PersistanceManager.swift */; };
-		42CEB05226D220A1007D7E96 /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CEB05126D220A1007D7E96 /* UIViewController+Ext.swift */; };
-		42CEB05826D221FE007D7E96 /* CommonHeroCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CEB05726D221FE007D7E96 /* CommonHeroCell.swift */; };
 		42CEB05A26D23D79007D7E96 /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CEB05926D23D79007D7E96 /* UIColor+Ext.swift */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +38,9 @@
 		421029E026D4969A00E925BD /* HeroDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroDetailsView.swift; sourceTree = "<group>"; };
 		421029E226D4999600E925BD /* PowerStatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerStatsView.swift; sourceTree = "<group>"; };
 		42523C7426D73C0D00270E53 /* BiographyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiographyView.swift; sourceTree = "<group>"; };
+		42B078F426DB4089000491EF /* UICollectionViewCell+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+Ext.swift"; sourceTree = "<group>"; };
+		42B078F626DB4174000491EF /* FeaturedHeroCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedHeroCell.swift; sourceTree = "<group>"; };
+		42B078F826DB5752000491EF /* SearchedHeroCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchedHeroCell.swift; sourceTree = "<group>"; };
 		42CD160526D0855400641646 /* CantinaHero.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CantinaHero.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42CD160826D0855400641646 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		42CD160A26D0855400641646 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -52,21 +51,14 @@
 		42CD162226D086A000641646 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		42CD162526D0878D00641646 /* CantinaHeroTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CantinaHeroTabBarController.swift; sourceTree = "<group>"; };
 		42CD162826D087DB00641646 /* HeroSearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroSearchVC.swift; sourceTree = "<group>"; };
-		42CD162A26D0881D00641646 /* HeroFavoritesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroFavoritesVC.swift; sourceTree = "<group>"; };
 		42CD162E26D08AAD00641646 /* SingleHeroProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleHeroProfileVC.swift; sourceTree = "<group>"; };
 		42CD163026D08C6C00641646 /* HeroHomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroHomeVC.swift; sourceTree = "<group>"; };
 		42CD163626D0994D00641646 /* HeroMainBackVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroMainBackVC.swift; sourceTree = "<group>"; };
-		42CD163826D0A2DF00641646 /* SearchResultsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsVC.swift; sourceTree = "<group>"; };
 		42CEB04026D1F649007D7E96 /* HeroSearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroSearchBar.swift; sourceTree = "<group>"; };
 		42CEB04226D1F7D6007D7E96 /* LayoutConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutConstants.swift; sourceTree = "<group>"; };
 		42CEB04426D1F981007D7E96 /* HeroTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroTitleLabel.swift; sourceTree = "<group>"; };
 		42CEB04626D1FCD4007D7E96 /* HeroBodyLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroBodyLabel.swift; sourceTree = "<group>"; };
-		42CEB04826D1FFB7007D7E96 /* CommonName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonName.swift; sourceTree = "<group>"; };
-		42CEB04A26D2169C007D7E96 /* WebLinks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebLinks.swift; sourceTree = "<group>"; };
 		42CEB04C26D21E41007D7E96 /* AppImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppImages.swift; sourceTree = "<group>"; };
-		42CEB04E26D21F0D007D7E96 /* PersistanceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistanceManager.swift; sourceTree = "<group>"; };
-		42CEB05126D220A1007D7E96 /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
-		42CEB05726D221FE007D7E96 /* CommonHeroCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonHeroCell.swift; sourceTree = "<group>"; };
 		42CEB05926D23D79007D7E96 /* UIColor+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -111,7 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				42CD162726D087C100641646 /* ScreenViews */,
-				42CD162426D0874F00641646 /* CustomViews */,
+				42CD162426D0874F00641646 /* CustomThemeViews */,
 				42CD162126D0860D00641646 /* Managers */,
 				42CD162026D0860400641646 /* Utilities */,
 				42CD161D26D0857100641646 /* Models */,
@@ -136,7 +128,6 @@
 			isa = PBXGroup;
 			children = (
 				42CD161E26D0858C00641646 /* SuperheroDataObjects.swift */,
-				42CEB04826D1FFB7007D7E96 /* CommonName.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -146,7 +137,6 @@
 			children = (
 				42CEB05026D2208B007D7E96 /* Extensions */,
 				42CEB04226D1F7D6007D7E96 /* LayoutConstants.swift */,
-				42CEB04A26D2169C007D7E96 /* WebLinks.swift */,
 				42CEB04C26D21E41007D7E96 /* AppImages.swift */,
 			);
 			path = Utilities;
@@ -156,22 +146,20 @@
 			isa = PBXGroup;
 			children = (
 				42CD162226D086A000641646 /* NetworkManager.swift */,
-				42CEB04E26D21F0D007D7E96 /* PersistanceManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
 		};
-		42CD162426D0874F00641646 /* CustomViews */ = {
+		42CD162426D0874F00641646 /* CustomThemeViews */ = {
 			isa = PBXGroup;
 			children = (
 				42CEB05626D221DD007D7E96 /* CollectionViewCells */,
 				42CEB05526D22116007D7E96 /* TabBarController */,
 				42CEB05426D22102007D7E96 /* ViewControllers */,
 				42CEB05326D220FA007D7E96 /* SearchBars */,
-				42CD163326D097CD00641646 /* ImageViews */,
 				42CD163226D097B900641646 /* Labels */,
 			);
-			path = CustomViews;
+			path = CustomThemeViews;
 			sourceTree = "<group>";
 		};
 		42CD162726D087C100641646 /* ScreenViews */ = {
@@ -179,10 +167,8 @@
 			children = (
 				421029DF26D4968000E925BD /* ScreenComponents */,
 				42CD162826D087DB00641646 /* HeroSearchVC.swift */,
-				42CD162A26D0881D00641646 /* HeroFavoritesVC.swift */,
 				42CD162E26D08AAD00641646 /* SingleHeroProfileVC.swift */,
 				42CD163026D08C6C00641646 /* HeroHomeVC.swift */,
-				42CD163826D0A2DF00641646 /* SearchResultsVC.swift */,
 			);
 			path = ScreenViews;
 			sourceTree = "<group>";
@@ -197,18 +183,11 @@
 			path = Labels;
 			sourceTree = "<group>";
 		};
-		42CD163326D097CD00641646 /* ImageViews */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ImageViews;
-			sourceTree = "<group>";
-		};
 		42CEB05026D2208B007D7E96 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				42CEB05126D220A1007D7E96 /* UIViewController+Ext.swift */,
 				42CEB05926D23D79007D7E96 /* UIColor+Ext.swift */,
+				42B078F426DB4089000491EF /* UICollectionViewCell+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -240,7 +219,8 @@
 		42CEB05626D221DD007D7E96 /* CollectionViewCells */ = {
 			isa = PBXGroup;
 			children = (
-				42CEB05726D221FE007D7E96 /* CommonHeroCell.swift */,
+				42B078F626DB4174000491EF /* FeaturedHeroCell.swift */,
+				42B078F826DB5752000491EF /* SearchedHeroCell.swift */,
 			);
 			path = CollectionViewCells;
 			sourceTree = "<group>";
@@ -316,14 +296,9 @@
 			files = (
 				42CD163726D0994D00641646 /* HeroMainBackVC.swift in Sources */,
 				42CEB04D26D21E41007D7E96 /* AppImages.swift in Sources */,
-				42CEB05226D220A1007D7E96 /* UIViewController+Ext.swift in Sources */,
+				42B078F926DB5752000491EF /* SearchedHeroCell.swift in Sources */,
 				42CD160926D0855400641646 /* AppDelegate.swift in Sources */,
-				42CEB05826D221FE007D7E96 /* CommonHeroCell.swift in Sources */,
-				42CD163926D0A2DF00641646 /* SearchResultsVC.swift in Sources */,
-				42CD162B26D0881D00641646 /* HeroFavoritesVC.swift in Sources */,
 				42CD162626D0878D00641646 /* CantinaHeroTabBarController.swift in Sources */,
-				42CEB04926D1FFB7007D7E96 /* CommonName.swift in Sources */,
-				42CEB04B26D2169C007D7E96 /* WebLinks.swift in Sources */,
 				42CEB04726D1FCD4007D7E96 /* HeroBodyLabel.swift in Sources */,
 				42CEB04326D1F7D6007D7E96 /* LayoutConstants.swift in Sources */,
 				42CD162326D086A000641646 /* NetworkManager.swift in Sources */,
@@ -333,13 +308,14 @@
 				42523C7526D73C0D00270E53 /* BiographyView.swift in Sources */,
 				42CEB05A26D23D79007D7E96 /* UIColor+Ext.swift in Sources */,
 				42CD161F26D0858C00641646 /* SuperheroDataObjects.swift in Sources */,
-				42CEB04F26D21F0D007D7E96 /* PersistanceManager.swift in Sources */,
+				42B078F726DB4174000491EF /* FeaturedHeroCell.swift in Sources */,
 				42CD162F26D08AAD00641646 /* SingleHeroProfileVC.swift in Sources */,
 				42CEB04526D1F981007D7E96 /* HeroTitleLabel.swift in Sources */,
 				42CD163126D08C6C00641646 /* HeroHomeVC.swift in Sources */,
 				42CD160B26D0855400641646 /* SceneDelegate.swift in Sources */,
 				421029DE26D489F000E925BD /* HeroHeaderLabel.swift in Sources */,
 				421029E126D4969A00E925BD /* HeroDetailsView.swift in Sources */,
+				42B078F526DB4089000491EF /* UICollectionViewCell+Ext.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

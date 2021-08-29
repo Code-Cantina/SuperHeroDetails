@@ -26,7 +26,7 @@ class HeroHeaderLabel: UILabel {
     private func setup() {
         numberOfLines = 0
         lineBreakMode = .byWordWrapping
-        textColor = UIColor.systemGreen
+        textColor = UIColor.mainThemeColor
         font = .boldSystemFont(ofSize: 28)
         translatesAutoresizingMaskIntoConstraints = false
     }

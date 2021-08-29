@@ -8,6 +8,7 @@
 import UIKit
 
 class HeroSearchBar: UISearchBar {
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
@@ -16,7 +17,6 @@ class HeroSearchBar: UISearchBar {
     }
 
     convenience init(placeholder: String = "", backgroundImage: UIImage? = nil) {
-        //setting to empty image removed border lines, unless otherwise needed
         self.init(frame: CGRect.zero)
         self.backgroundImage = backgroundImage
         self.placeholder = placeholder
@@ -24,7 +24,7 @@ class HeroSearchBar: UISearchBar {
     
     private func setup() {
         self.translatesAutoresizingMaskIntoConstraints = false
-        self.tintColor = UIColor.systemGreen
+        self.tintColor = UIColor.mainThemeColor
     }
     
     @objc func didBeganEditing() {
@@ -37,7 +37,5 @@ class HeroSearchBar: UISearchBar {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-    
     
 }

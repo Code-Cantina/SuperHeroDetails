@@ -25,7 +25,6 @@ class HeroTitleLabel: UILabel {
     }
     
     private func setup() {
-//        textColor = UIColor.labelGray
         numberOfLines = 0
         lineBreakMode = .byWordWrapping
         translatesAutoresizingMaskIntoConstraints = false

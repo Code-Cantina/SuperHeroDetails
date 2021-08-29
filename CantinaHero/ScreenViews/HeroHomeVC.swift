@@ -5,20 +5,17 @@
 //  Created by Danny Copeland on 8/20/21.
 //
 
-// This view controller will be used for featured hero information.
-// Fetch featured hero information. ?? Store featured hero data in a json file on server or randomly fetch featured info every x interval? To avoid fetching new random featured data each launch of app, maybe store a date and featured hero information in preferences? Can then fetch new featured hero data if been more then a week or something? ??
-// Display the featured hero images in a horizontal collection view.
-// Display information about the active/displayed hero from the collection view in a details section beneath the collection view.
-
 import UIKit
 
 class HeroHomeVC: HeroMainBackVC {
-
-    //MARK: - Public Properties
     
     //MARK: - Private Properties
+    
     private var featuredHeros: [HeroData] = []
     private var displayedHero: HeroData!
+    
+    //I randomly put together this list of strings. Will randomly grab 1 each view load and fetch heros to be used as featured
+    private let randomFeaturedHeroDataSearches = ["Star", "Woman", "King", "Man", "Black", "Hawk", "Green", "Night", "Dark", "Doc"]
     
     private let pageHeaderLbl = HeroHeaderLabel(text: "Featured Hero's")
     
@@ -34,7 +31,7 @@ class HeroHomeVC: HeroMainBackVC {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
         let cv = UICollectionView(frame: CGRect.zero, collectionViewLayout: layout)
-        cv.backgroundColor = .secondarySystemGroupedBackground
+        cv.backgroundColor = .secondarySystemBackground
         cv.translatesAutoresizingMaskIntoConstraints = false
         return cv
     }()
@@ -47,8 +44,7 @@ class HeroHomeVC: HeroMainBackVC {
         view.backgroundColor = .secondarySystemBackground
         setupHeader()
         setupFeaturedContainerView()
-        fetchFeaturedHeros()
-        
+        loadFeaturedData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -110,38 +106,34 @@ class HeroHomeVC: HeroMainBackVC {
     
     //MARK: - Data
     
-    /// fetch the featured heros data from the server. This is a json file currently.
-    private func fetchFeaturedHeros() {
-        self.showLoadingView()
-        
-        let configuration = URLSessionConfiguration.ephemeral
-        let session = URLSession(configuration: configuration)
-        session.dataTask(with: URL(string: WebLinks.featuredHerosFilePath)!) { (data, response, error) -> Void in
-            // Check if data was received successfully
-            if let jsonData = data {
-                do {
-                    let decoder = JSONDecoder()
-                    let parsedData = try decoder.decode(SuperHero.self, from: jsonData)
-                    self.featuredHeros = parsedData.results
-                    self.displayedHero = self.featuredHeros[0]
-                    DispatchQueue.main.async {
-                        self.setupDetailsView()
-                        self.updateFeaturedHeroInfo(hero: self.displayedHero)
-                        self.featuredCollectionView.reloadData()
-                        self.dismissLoadingView()
-                    }
-                } catch {
-                    // Something went wrong
-                    print("error fetching data")
-                    self.dismissLoadingView()
-                }
-            } else {
-                print("error getting json data")
-                self.dismissLoadingView()
-            }
-        }.resume()
+    private func loadFeaturedData() {
+        if let searchParam = self.randomFeaturedHeroDataSearches.randomElement() {
+            self.searchForHeros(forText: searchParam)
+        }
     }
     
+    private func searchForHeros(forText: String) {
+        displayLoadingView()
+        NetworkManager.shared.fetchSearchResults(for: forText) { [weak self] result in
+            guard let self = self else { return }
+            self.dismissLoadingView()
+            switch result {
+            case .success(let heros):
+                self.featuredHeros = heros.results
+                self.displayedHero = self.featuredHeros[0]
+                DispatchQueue.main.async {
+                    self.setupDetailsView()
+                    self.updateFeaturedHeroInfo(hero: self.displayedHero)
+                    self.featuredCollectionView.reloadData()
+                }
+                
+            case .failure(let error):
+                //TODO Handle it :)
+                print("error: \(error)")
+            }
+        }
+    }
+
     /// Update the featured hero info display elements for the hero found at provided array index
     private func updateFeaturedHeroInfo(hero: HeroData) {
         self.detailsArea.updateHero(hero: hero)
@@ -207,6 +199,11 @@ extension HeroHomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICo
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if featuredHeros.count == 0 {
+            collectionView.setEmptyMessage("No featured data found. Please check network.")
+        } else {
+            collectionView.restore()
+        }
         return featuredHeros.count
     }
     

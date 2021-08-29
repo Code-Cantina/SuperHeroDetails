@@ -11,8 +11,8 @@ class CantinaHeroTabBarController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        UITabBar.appearance().tintColor = .systemGreen
-        viewControllers = [createSearchNC(), createHomeNC(), createFavoritesNC()]
+        UITabBar.appearance().tintColor = UIColor.mainThemeColor
+        viewControllers = [createSearchNC(), createHomeNC()]
     }
     
     func createSearchNC() -> UINavigationController {
@@ -27,13 +27,6 @@ class CantinaHeroTabBarController: UITabBarController {
         homeVC.title = "Featured"
         homeVC.tabBarItem = UITabBarItem(tabBarSystemItem: .featured, tag: 1)
         return UINavigationController(rootViewController: homeVC)
-    }
-    
-    func createFavoritesNC() -> UINavigationController {
-        let favoritesListVC = HeroFavoritesVC()
-        favoritesListVC.title = "Favorites"
-        favoritesListVC.tabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 2)
-        return UINavigationController(rootViewController: favoritesListVC)
     }
     
 }

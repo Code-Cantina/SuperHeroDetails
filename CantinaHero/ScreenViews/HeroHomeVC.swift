@@ -119,14 +119,18 @@ class HeroHomeVC: HeroMainBackVC {
             self.dismissLoadingView()
             switch result {
             case .success(let heros):
-                self.featuredHeros = heros.results
-                self.displayedHero = self.featuredHeros[0]
-                DispatchQueue.main.async {
-                    self.setupDetailsView()
-                    self.updateFeaturedHeroInfo(hero: self.displayedHero)
-                    self.featuredCollectionView.reloadData()
+                if heros.results.count > 0 {
+                    self.featuredHeros = heros.results
+                    self.displayedHero = self.featuredHeros[0]
+                    DispatchQueue.main.async {
+                        self.setupDetailsView()
+                        self.updateFeaturedHeroInfo(hero: self.displayedHero)
+                        self.featuredCollectionView.reloadData()
+                    }
+                } else {
+                    //display some other message to user..
                 }
-                
+               
             case .failure(let error):
                 //TODO Handle it :)
                 print("error: \(error)")

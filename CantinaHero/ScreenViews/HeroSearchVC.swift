@@ -93,12 +93,14 @@ class HeroSearchVC: HeroMainBackVC {
             switch result {
             case .success(let heros):
                 self.heroResults = heros.results
+                
                 DispatchQueue.main.async {
                     self.reloadCollectionViewAnimated()
                 }
-                
             case .failure(let error):
-                self.searchedHerosCV.setEmptyMessage("Search results produced and error")
+                DispatchQueue.main.async {
+                    self.searchedHerosCV.setEmptyMessage("Search results produced and error. Please refine your search and try again.")
+                }
                 print("error: \(error)")
             }
         }

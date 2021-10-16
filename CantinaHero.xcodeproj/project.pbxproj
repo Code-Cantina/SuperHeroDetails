@@ -11,6 +11,7 @@
 		421029E126D4969A00E925BD /* HeroDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421029E026D4969A00E925BD /* HeroDetailsView.swift */; };
 		421029E326D4999600E925BD /* PowerStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421029E226D4999600E925BD /* PowerStatsView.swift */; };
 		42523C7526D73C0D00270E53 /* BiographyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42523C7426D73C0D00270E53 /* BiographyView.swift */; };
+		42574BE1271A776100DD9DC1 /* CantinaHeroTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42574BE0271A776100DD9DC1 /* CantinaHeroTests.swift */; };
 		42B078F526DB4089000491EF /* UICollectionViewCell+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B078F426DB4089000491EF /* UICollectionViewCell+Ext.swift */; };
 		42B078F726DB4174000491EF /* FeaturedHeroCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B078F626DB4174000491EF /* FeaturedHeroCell.swift */; };
 		42B078F926DB5752000491EF /* SearchedHeroCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B078F826DB5752000491EF /* SearchedHeroCell.swift */; };
@@ -33,11 +34,23 @@
 		42CEB05A26D23D79007D7E96 /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CEB05926D23D79007D7E96 /* UIColor+Ext.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		42574BE2271A776100DD9DC1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 42CD15FD26D0855400641646 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 42CD160426D0855400641646;
+			remoteInfo = CantinaHero;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		421029DD26D489F000E925BD /* HeroHeaderLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroHeaderLabel.swift; sourceTree = "<group>"; };
 		421029E026D4969A00E925BD /* HeroDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroDetailsView.swift; sourceTree = "<group>"; };
 		421029E226D4999600E925BD /* PowerStatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerStatsView.swift; sourceTree = "<group>"; };
 		42523C7426D73C0D00270E53 /* BiographyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiographyView.swift; sourceTree = "<group>"; };
+		42574BDE271A776100DD9DC1 /* CantinaHeroTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CantinaHeroTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		42574BE0271A776100DD9DC1 /* CantinaHeroTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CantinaHeroTests.swift; sourceTree = "<group>"; };
 		42B078F426DB4089000491EF /* UICollectionViewCell+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+Ext.swift"; sourceTree = "<group>"; };
 		42B078F626DB4174000491EF /* FeaturedHeroCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedHeroCell.swift; sourceTree = "<group>"; };
 		42B078F826DB5752000491EF /* SearchedHeroCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchedHeroCell.swift; sourceTree = "<group>"; };
@@ -63,6 +76,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		42574BDB271A776100DD9DC1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		42CD160226D0855400641646 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -83,10 +103,19 @@
 			path = ScreenComponents;
 			sourceTree = "<group>";
 		};
+		42574BDF271A776100DD9DC1 /* CantinaHeroTests */ = {
+			isa = PBXGroup;
+			children = (
+				42574BE0271A776100DD9DC1 /* CantinaHeroTests.swift */,
+			);
+			path = CantinaHeroTests;
+			sourceTree = "<group>";
+		};
 		42CD15FC26D0855400641646 = {
 			isa = PBXGroup;
 			children = (
 				42CD160726D0855400641646 /* CantinaHero */,
+				42574BDF271A776100DD9DC1 /* CantinaHeroTests */,
 				42CD160626D0855400641646 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -95,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				42CD160526D0855400641646 /* CantinaHero.app */,
+				42574BDE271A776100DD9DC1 /* CantinaHeroTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -228,6 +258,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		42574BDD271A776100DD9DC1 /* CantinaHeroTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 42574BE6271A776100DD9DC1 /* Build configuration list for PBXNativeTarget "CantinaHeroTests" */;
+			buildPhases = (
+				42574BDA271A776100DD9DC1 /* Sources */,
+				42574BDB271A776100DD9DC1 /* Frameworks */,
+				42574BDC271A776100DD9DC1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				42574BE3271A776100DD9DC1 /* PBXTargetDependency */,
+			);
+			name = CantinaHeroTests;
+			productName = CantinaHeroTests;
+			productReference = 42574BDE271A776100DD9DC1 /* CantinaHeroTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		42CD160426D0855400641646 /* CantinaHero */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 42CD161926D0855500641646 /* Build configuration list for PBXNativeTarget "CantinaHero" */;
@@ -251,9 +299,13 @@
 		42CD15FD26D0855400641646 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1250;
+				LastSwiftUpdateCheck = 1300;
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
+					42574BDD271A776100DD9DC1 = {
+						CreatedOnToolsVersion = 13.0;
+						TestTargetID = 42CD160426D0855400641646;
+					};
 					42CD160426D0855400641646 = {
 						CreatedOnToolsVersion = 12.5;
 					};
@@ -273,11 +325,19 @@
 			projectRoot = "";
 			targets = (
 				42CD160426D0855400641646 /* CantinaHero */,
+				42574BDD271A776100DD9DC1 /* CantinaHeroTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		42574BDC271A776100DD9DC1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		42CD160326D0855400641646 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -290,6 +350,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		42574BDA271A776100DD9DC1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42574BE1271A776100DD9DC1 /* CantinaHeroTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		42CD160126D0855400641646 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -321,6 +389,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		42574BE3271A776100DD9DC1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 42CD160426D0855400641646 /* CantinaHero */;
+			targetProxy = 42574BE2271A776100DD9DC1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		42CD161326D0855500641646 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -333,6 +409,56 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		42574BE4271A776100DD9DC1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 86PU9U8BL6;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dannycopeland.CantinaHeroTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CantinaHero.app/CantinaHero";
+			};
+			name = Debug;
+		};
+		42574BE5271A776100DD9DC1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 86PU9U8BL6;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dannycopeland.CantinaHeroTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CantinaHero.app/CantinaHero";
+			};
+			name = Release;
+		};
 		42CD161726D0855500641646 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -490,6 +616,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		42574BE6271A776100DD9DC1 /* Build configuration list for PBXNativeTarget "CantinaHeroTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				42574BE4271A776100DD9DC1 /* Debug */,
+				42574BE5271A776100DD9DC1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		42CD160026D0855400641646 /* Build configuration list for PBXProject "CantinaHero" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

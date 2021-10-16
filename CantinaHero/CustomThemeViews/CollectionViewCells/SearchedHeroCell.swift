@@ -48,10 +48,10 @@ class SearchedHeroCell: UICollectionViewCell {
         addSubview(containerView)
     
         NSLayoutConstraint.activate([
-            containerView.topAnchor.constraint(equalTo: contentView.topAnchor),
-            containerView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
-            containerView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-            containerView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
+            containerView.topAnchor.constraint(equalTo: self.topAnchor),
+            containerView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            containerView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            containerView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
             
             logoImageView.topAnchor.constraint(equalTo: containerView.topAnchor, constant: Layout.smallBufferPadding),
             logoImageView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: Layout.smallBufferPadding),

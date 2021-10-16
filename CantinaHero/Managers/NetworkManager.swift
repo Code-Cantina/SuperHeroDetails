@@ -12,7 +12,7 @@ class NetworkManager {
     private let baseUrl = "https://superheroapi.com/api/"
     let cache = NSCache<NSString, UIImage>()
     
-    private let heroApiToken = "" // GET Your Own Key from https://superheroapi.com
+    private let heroApiToken = "4107650602665624" // GET Your Own Key from https://superheroapi.com
     
     //https://superheroapi.com/api/access-token/search/name
     

@@ -28,13 +28,13 @@ class HeroDetailsView: UIView {
         bioView.updateHero(hero: self.heroData)
     }
    
-    private let scrollView: UIScrollView = {
+    private lazy var scrollView: UIScrollView = {
         let scrollView = UIScrollView()
         scrollView.translatesAutoresizingMaskIntoConstraints = false
         return scrollView
     }()
     
-    private let mainContainer: UIView = {
+    private lazy var mainContainer: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         return view

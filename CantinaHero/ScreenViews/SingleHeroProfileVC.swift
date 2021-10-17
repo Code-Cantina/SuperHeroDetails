@@ -14,7 +14,7 @@ class SingleHeroProfileVC: UIViewController {
     
     private let pageHeaderLbl = HeroHeaderLabel(text: "")
     
-    private let logoImageView: UIImageView = {
+    private lazy var logoImageView: UIImageView = {
         let imageView = UIImageView(image: AppImages.defaultHeroImage)
         imageView.contentMode = .scaleToFill
         imageView.layer.cornerRadius = 10

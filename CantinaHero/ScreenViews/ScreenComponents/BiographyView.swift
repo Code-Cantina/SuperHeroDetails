@@ -43,7 +43,7 @@ class BiographyView: UIView {
     private let affiliations = HeroBodyLabel(textAlignment: .left)
     private let relatives = HeroBodyLabel(textAlignment: .left)
     
-    private let bioStack: UIStackView = {
+    private lazy var bioStack: UIStackView = {
         let stack = UIStackView()
         stack.alignment = .leading
         stack.axis = .vertical

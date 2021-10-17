@@ -15,7 +15,7 @@ class HeroSearchVC: HeroMainBackVC {
     private let heroSearchBar = HeroSearchBar(placeholder: "Search Hero's by Name", backgroundImage: UIImage())
     
     private let heroCellId = "heroCellId"
-    private let searchedHerosCV: UICollectionView = {
+    private lazy var searchedHerosCV: UICollectionView = {
         let cv = UICollectionView(frame: CGRect.zero, collectionViewLayout: UICollectionViewFlowLayout.init())
         cv.backgroundColor = .secondarySystemGroupedBackground
         cv.translatesAutoresizingMaskIntoConstraints = false

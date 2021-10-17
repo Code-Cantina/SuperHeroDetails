@@ -24,13 +24,13 @@ class PowerStatsView: UIView {
     }
    
     //MARK: - UI Properties
-    private let statHeader: HeroTitleLabel = {
+    private lazy var statHeader: HeroTitleLabel = {
         let lbl = HeroTitleLabel(textAlignment: .left, fontSize: 16)
         lbl.text = "Power Stats:"
         return lbl
     }()
     
-    private let powerStatsValuesStack: UIStackView = {
+    private lazy var powerStatsValuesStack: UIStackView = {
         let stack = UIStackView()
         stack.alignment = .leading
         stack.axis = .vertical
@@ -47,13 +47,13 @@ class PowerStatsView: UIView {
     private let combat = HeroBodyLabel(textAlignment: .left)
     
     //appearance header
-    private let appearanceHeader: HeroTitleLabel = {
+    private lazy var appearanceHeader: HeroTitleLabel = {
         let lbl = HeroTitleLabel(textAlignment: .left, fontSize: 16)
         lbl.text = "Appearance:"
         return lbl
     }()
     
-    private let appearanceStatsValuesStack: UIStackView = {
+    private lazy var appearanceStatsValuesStack: UIStackView = {
         let stack = UIStackView()
         stack.alignment = .leading
         stack.axis = .vertical
@@ -69,7 +69,7 @@ class PowerStatsView: UIView {
     private let eyeColor = HeroBodyLabel(textAlignment: .left)
     private let hairColor = HeroBodyLabel(textAlignment: .left)
     
-    private let stacksStack: UIStackView = {
+    private lazy var stacksStack: UIStackView = {
         let stack = UIStackView()
         stack.alignment = .leading
         stack.axis = .horizontal

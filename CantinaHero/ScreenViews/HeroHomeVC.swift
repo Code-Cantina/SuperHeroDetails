@@ -19,7 +19,7 @@ class HeroHomeVC: HeroMainBackVC {
     
     private let pageHeaderLbl = HeroHeaderLabel(text: "Featured Hero's")
     
-    private let featuredContainerView: UIView = {
+    private lazy var featuredContainerView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
@@ -27,7 +27,7 @@ class HeroHomeVC: HeroMainBackVC {
     
     private let featuredCellId = "featuredCellId"
     private var isSwipingRight: Bool = false
-    private let featuredCollectionView: UICollectionView = {
+    private lazy var featuredCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
         let cv = UICollectionView(frame: CGRect.zero, collectionViewLayout: layout)

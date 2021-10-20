@@ -23,7 +23,7 @@
 ## TODO
 * Could use more styling for the hero details.
 * For stated above reasons, more error handling.
-* Move strings used to file for localization purposes.
+* Did not intend much for this, was just fooling around.
 
 ## How To Get
 * Clone/Fork

@@ -12,13 +12,13 @@ class SearchedHeroCell: UICollectionViewCell {
     //MARK: - Properties
     private let heroImageWidth: CGFloat = 65
     
-    let containerView: UIView = {
+    lazy var containerView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
     
-    let logoImageView: UIImageView = {
+    lazy var logoImageView: UIImageView = {
         let imageView = UIImageView(image: AppImages.defaultHeroImage)
         imageView.contentMode = .scaleToFill
         imageView.layer.cornerRadius = 6
